@@ -1,0 +1,124 @@
+
+Everything in python is Object
+** Every object contains set of methods ****
+
+
+number
+--------
+number can be integer or decimal or octal or hexa.
+
+val = 10
+aval = 45.4
+
+string
+-------
+string can be defined in single or double or triple quotes.
+
+aname = 'python programming'
+bname = "scala programming"
+cname = """hadoop"""
+
+
+list
+-----
+list contains set of elements.
+Elements can be set of numbers or strings or any combination.
+list elements are defined in [].
+
+alist = [10,20,30]
+blist = ["unix","go","scala"]
+clist = [20,3,4.5,"java"]
+
+
+
+tuple ( immutable | unchangable )
+-----
+tuple contains set of elements.
+Elements can be set of numbers or strings or any combination.
+tuple elements are defined in ().
+****** Elements inside tuple CANNOT be modified DIRECTLY *******
+
+atup = (45,45,4)
+btup = ("unix",56,5.5)
+
+
+dictionary|hash|map
+------------
+dictionary contains elements in key:value pairs
+dictionary elements are defined in {}.
+keys are used to uniquely identify the value.
+keys should be either number or string.
+values are number,string,list,tuple,dictionary.
+
+
+
+syntax:    object = {key:value , key:value , key:value }
+example:     book = {"chap1":10 ,"chap2":20 ,"chap3":30 , "chap1":1000,2:5}
+             values= {1:2,3:4,5:6}
+              data = {"chap1":[10,"UK","Rita"] ,"chap2":[20,"US","Sita"] ,"chap3":[30,"AUS","John"] }
+             
+
+
+
+
+
+
+
+set
+=---
+set is UNORDERED collection of UNIQUE elements of SAME type.
+
+aset = {10,10,10,20,30}
+
+
+
+classification of objects
+---------------------------
+
+mutable objects
+------------------
+list
+dictionary
+set
+
+immutable objects
+---------------------
+number
+string
+tuple
+
+
+
+methods & functions
+---------------------
+
+
+methods: 
+- methods are object specific.
+- Every object has its different methods
+
+
+functions:
+- functions are common for all the objects
+  ( print()   list()   tuple()   help()   range()  isinstance()  type()   len() )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
