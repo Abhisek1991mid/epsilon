@@ -1,79 +1,79 @@
 
-Everything in python is Object
-** Every object contains set of methods ****
+** Everything in Python is object **
+** Every object contains methods
 
 
+objects
+-------
 number
---------
-number can be integer or decimal or octal or hexa.
+------
+number can be integer or decimal or octal or hexa
 
-val = 10
-aval = 45.4
+aval = 10
+bval = 34.44
+
+
 
 string
--------
-string can be defined in single or double or triple quotes.
+------
+String can be defined in single or double or triple quotes.
 
 aname = 'python programming'
-bname = "scala programming"
-cname = """hadoop"""
+bname = "java"
+cname = """database"""
+
 
 
 list
 -----
 list contains set of elements.
-Elements can be set of numbers or strings or any combination.
-list elements are defined in [].
+Elements can be set of numbers or strings or any combination
+list is defined in []
 
 alist = [10,20,30]
-blist = ["unix","go","scala"]
-clist = [20,3,4.5,"java"]
+blist = ["java","scala","spark"]
+clist = [10,34.5,"unix"]
 
 
-
-tuple ( immutable | unchangable )
------
+tuple
+-------
 tuple contains set of elements.
 Elements can be set of numbers or strings or any combination.
-tuple elements are defined in ().
-****** Elements inside tuple CANNOT be modified DIRECTLY *******
-
-atup = (45,45,4)
-btup = ("unix",56,5.5)
+tuple is defined in ().
+Elements inside tuple are NOT modified DIRECTLy.
 
 
-dictionary|hash|map
-------------
+atup = (10,20,30)
+btup = ("unix","kafka")
+ctup = (10,243.44)
+
+
+dictionary
+-----------
 dictionary contains elements in key:value pairs
-dictionary elements are defined in {}.
-keys are used to uniquely identify the value.
-keys should be either number or string.
-values are number,string,list,tuple,dictionary.
+dictionary is defined in {}.
+In dictionary ... key will be number or string which is used to uniquely identify
+                 value can be number or string or list or tuple or dictionary or any complex datastructure
 
-
-
-syntax:    object = {key:value , key:value , key:value }
-example:     book = {"chap1":10 ,"chap2":20 ,"chap3":30 , "chap1":1000,2:5}
-             values= {1:2,3:4,5:6}
-              data = {"chap1":[10,"UK","Rita"] ,"chap2":[20,"US","Sita"] ,"chap3":[30,"AUS","John"] }
-             
-
-
-
-
-
+syntax:      object = {key:value , key:value , key:value }
+example:       book = {"chap1":10,"chap2":20 ,"chap3":30 }
+              values= {1:2,3:4,5:6}
+             bookinfo={"chap1":[10,"UK","Rita"] ,"chap2":[20,"US","mary"] ,"chap3":[30,"AUS","John"] }
 
 
 set
-=---
-set is UNORDERED collection of UNIQUE elements of SAME type.
+---
+set is UNORDERED collection of UNIQUE values of SAME type.
+set elements are defined in {}.
 
-aset = {10,10,10,20,30}
+aset = {10,10,10,20,20,30}
+
 
 
 
 classification of objects
----------------------------
+--------------------------
+
 
 mutable objects
 ------------------
@@ -81,8 +81,9 @@ list
 dictionary
 set
 
+
 immutable objects
----------------------
+-----------------
 number
 string
 tuple
@@ -90,17 +91,355 @@ tuple
 
 
 methods & functions
----------------------
+--------------------
+
+method: method is object specific.
+        Every object has its own methods
+        aname.upper()
+        alist.append(30)
 
 
-methods: 
-- methods are object specific.
-- Every object has its different methods
+function: functions are common all the objects
+          print()   dir()   help()  len()  type()  sum()  max()  min()  isinstance()  input() range()
 
 
-functions:
-- functions are common for all the objects
-  ( print()   list()   tuple()   help()   range()  isinstance()  type()   len() )
+
+cls
+clear
+!cls
+
+
+
+
+file handling
+--------------
+
+
+working with flat files ( log csv conf txt dat ... )
+working with third party files ( pdf doc docx ppt mpeg ..... )
+
+
+working with flat files
+----------------------
+read  ( r ) 
+write ( w ) 
+append ( a )
+
+open the file :
+
+syntax:     object = open(filename,mode)
+example:      fobj = open("customers.txt","r")  # read
+
+              fobj = open("customers.txt","w")  # write
+              case1: If file is not existing ...file will be created first
+              case2: If file is already existing.. it overwrites
+
+              fobj = open("customers.txt","a")  # append
+              case1: If file is not existing ...file will be created first
+              case2: If file is already existing.. it appends the data to the file
+
+
+
+closing the file
+-----------------
+fobj.close()
+
+
+read operation
+--------------
+
+
+- reading line by line using file object itself
+- using fobj.readlines()
+- using fobj.read()
+- using csv library
+- using pandas library
+
+
+
+
+exception handling
+----------------
+
+- syntax error
+- semantic error or logical error or runtime error
+
+
+Handling the exceptions in the runtime is known exception handling
+
+try
+except   
+else   ( optional)
+finally( optional)
+
+
+
+libraries
+----------
+
+
+builtin library  ( 8000+ libraries with anaconda )
+---------------
+All the builtin libraries which are generally used are installed with python/anaconda.
+( math operations , OS related , ftp , autogenerated mails , copying, moving , reading csv,xml,json)
+
+third party library  ( 2,80,000+ )
+-------------------
+Depending on the requirement( cloud  ML database operations  ms-office  zip files, image processing)  developer has to 
+install third party library from www.pypi.org(manually) or using tools like pip and easy_install.
+
+
+
+
+
+
+
+
+
+
+8000+  builtin libraries
+250000+ third party library
+
+builtin libraries
+-----------------------
+
+os            : os.listdir() os.remove() 
+sys           : system config information   sys.exit(0)
+urllib.request: working with http
+math          : mathematical operations
+random        : random numbers
+calendar
+smtplib       : sending mails
+ftplib        : ftp'ng the file
+telnetlib     :
+logging       : logging all the events
+shutil        : copy,move,rmtree ....
+filecmp       : comparing directories
+zipfile       : create/extract the zip files
+rarfile       : create/extract the tar files
+tarfile       : create/extract the tarfiles
+getpass       : shadowing the password
+json          : reading/writing json files
+csv           : reading/writing csv files
+xml        
+sysconfig     : system configuration
+collections   : working with dictionaries
+argparse      : passing args from command line
+optparse      : passing args from command line
+time          : working with date and time
+datetime      : working with date and time
+cryptography  : encrypting and decrypting the passwords  
+heapq         : performing array operations
+gzip          : reading gunzip files
+re            : validating the strings
+ipadresss     : validting ip address
+platform      : display platform information
+pathlib       : creating temp files
+threading     : for performing multi threading
+multiprocessing:
+subprocess    : invoking the system commands ( linux or dos commands)
+
+
+
+frequently used third party libraries
+---------------------------------------
+database related
+----------------
+pymysql   :  mysql
+cx_Oracle :  Oracle
+pymongo   :  MOngoDBB
+pymssql   : sql server
+
+
+web frameworks ( developing web applications)
+--------------
+django
+flask
+bottom
+
+analytics/machine learning
+---------------------------
+numpy
+scipy
+pandas
+seaborn
+plotly
+ggplot
+matplotlib   : visualizing data .. bar graph.. pie graph
+scikit-learn :  machine learning algorithms
+
+image processing
+---------------
+pillow
+opencv
+
+APIs ( REST API) ( web services )   ( SOAP services   REST APIs)
+-----
+urllib
+requests
+
+excel programming
+------------------
+openpyxl    : reading/write excel files
+xlsxwriter  : writing to excel file
+pyexcel
+xlrd
+python-docx : working with ms-word
+
+networking
+-----------
+paramiko   :  interacting with remote servers
+netmiko    :  connecting to router/switch
+pyping     :  ping any host or ip address
+
+
+
+web scrapping
+--------------
+beautifulsoup
+scrapy
+
+
+
+
+
+
+
+
+mysql
+---------
+
+
+display all existing databases
+-------------------------------
+show databases;
+
+creating database
+-----------------
+create database epsilon;
+
+access your database
+-------------------
+use epsilon;
+
+display all existing tables
+--------------------------
+show tables ;   ( empty )
+
+create table
+--------------
+create table realestate ( street varchar(100) , city varchar(100) );
+
+inserting records
+--------------------
+insert into realestate values('MG Road','Banglore');
+insert into realestate values('HitechCity','Hyderabad');
+
+display all the records
+------------------------
+select * from realestate;
+
+
+
+
+
+
+
+
+
+
+definition|function|subroutine|submodule
+---------------------------------------
+
+
+
+fixed arguments
+default arguments
+keyword arguments
+variable length arguments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
