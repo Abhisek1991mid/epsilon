@@ -12,7 +12,7 @@ print(x)
 
 import re
 string = 'hello 12 hi 89. Howdy 34'
-pattern = '\d+'
+pattern = '\d+'    
 result = re.findall(pattern, string)
 print(result)
 
@@ -45,6 +45,8 @@ string = '39801 356, 2102 1111'
 pattern = '(\d{3}) (\d{2})'
 # match variable contains a Match object.
 match = re.search(pattern, string)
+
+print(re.findall(pattern,string))
 if match:
   print(match.group())
 else:
@@ -72,7 +74,7 @@ else:
 
 import re
 regex = '^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$'
-email = "giridhar276gmail.com123"
+email = "giridhar276@gmail.com"
 
 if re.search(regex,email):
     print("valid email")
